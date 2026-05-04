@@ -28,7 +28,7 @@ export default function Home() {
 
     try {
       const res = await axios.post("/api/chat", {
-        message: input,
+        messages: [...messages, userMessage],
       });
 
       const botMessage: Message = {
